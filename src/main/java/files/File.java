@@ -10,4 +10,16 @@ public abstract class File {
         this.directory = directory;
         this.size = size;
     }
+
+    public String getName() {
+        return name;
+    }
+
+    public String getDirectory() {
+        return directory;
+    }
+
+    public int getSize() {
+        return size;
+    }
 }

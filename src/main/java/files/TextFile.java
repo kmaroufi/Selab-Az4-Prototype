@@ -7,4 +7,8 @@ public class TextFile extends File {
         super(name, directory, size);
         this.encoding = encoding;
     }
+
+    public String getEncoding() {
+        return encoding;
+    }
 }
