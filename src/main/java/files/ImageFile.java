@@ -10,6 +10,10 @@ public class ImageFile extends File {
         this.format = format;
     }
 
+    public ImageFormat getFormat() {
+        return format;
+    }
+
     @Override
     public File clone() {
         return null;
