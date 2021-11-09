@@ -16,6 +16,6 @@ public class ImageFile extends File {
 
     @Override
     public File clone() {
-        return null;
+        return new ImageFile(name, directory, size, format);
     }
 }
