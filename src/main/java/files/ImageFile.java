@@ -18,4 +18,9 @@ public class ImageFile extends File {
     public File clone() {
         return new ImageFile(name, directory, size, format);
     }
+
+    @Override
+    public String toString() {
+        return super.toString() + ", " + format;
+    }
 }

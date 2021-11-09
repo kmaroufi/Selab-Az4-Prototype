@@ -24,4 +24,8 @@ public abstract class File {
     }
 
     public abstract File clone();
+
+    public String toString() {
+        return name + ", " + directory + ", " + String.valueOf(size);
+    }
 }

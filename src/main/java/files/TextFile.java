@@ -16,4 +16,9 @@ public class TextFile extends File {
     public File clone() {
         return new TextFile(name, directory, size, encoding);
     }
+
+    @Override
+    public String toString() {
+        return super.toString() + ", " + encoding;
+    }
 }
