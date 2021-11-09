@@ -27,4 +27,10 @@ public class TextFileTest {
         TextFile textFile = new TextFile("text1.txt", "/", 150, "Unicode");
         Assertions.assertEquals(150, textFile.getSize());
     }
+
+    @Test
+    public void testGetEncoding() {
+        TextFile textFile = new TextFile("text1.txt", "/", 150, "Unicode");
+        Assertions.assertEquals("Unicode", textFile.getEncoding());
+    }
 }
