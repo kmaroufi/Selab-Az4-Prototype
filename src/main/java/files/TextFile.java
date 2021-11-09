@@ -11,4 +11,9 @@ public class TextFile extends File {
     public String getEncoding() {
         return encoding;
     }
+
+    @Override
+    public File clone() {
+        return new TextFile(name, directory, size, encoding);
+    }
 }

@@ -1,9 +1,9 @@
 package files;
 
 public abstract class File {
-    private String name;
-    private String directory;
-    private int size;
+    protected String name;
+    protected String directory;
+    protected int size;
 
     public File(String name, String directory, int size) {
         this.name = name;
@@ -22,4 +22,6 @@ public abstract class File {
     public int getSize() {
         return size;
     }
+
+    public abstract File clone();
 }
