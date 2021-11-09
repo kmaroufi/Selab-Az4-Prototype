@@ -9,4 +9,28 @@ public class ImageFileTest {
         Assertions.assertDoesNotThrow(() ->
                 new ImageFile("img.png", "/", 150, ImageFile.ImageFormat.PNG));
     }
+
+    @Test
+    public void testGetName() {
+        ImageFile imageFile = new ImageFile("img.png", "/", 150, ImageFile.ImageFormat.PNG);
+        Assertions.assertEquals("img.png", imageFile.getName());
+    }
+
+    @Test
+    public void testGetDirectory() {
+        ImageFile imageFile = new ImageFile("img.png", "/", 150, ImageFile.ImageFormat.PNG);
+        Assertions.assertEquals("/", imageFile.getDirectory());
+    }
+
+    @Test
+    public void testGetSize() {
+        ImageFile imageFile = new ImageFile("img.png", "/", 150, ImageFile.ImageFormat.PNG);
+        Assertions.assertEquals(150, imageFile.getSize());
+    }
+
+    @Test
+    public void testGetEncoding() {
+        ImageFile imageFile = new ImageFile("img.png", "/", 150, ImageFile.ImageFormat.PNG);
+        Assertions.assertEquals(ImageFile.ImageFormat.PNG, imageFile.getFormat());
+    }
 }
