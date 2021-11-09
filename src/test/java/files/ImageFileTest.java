@@ -36,9 +36,9 @@ public class ImageFileTest {
 
     @Test
     public void testClone() {
-        ImageFile imageFile = new ImageFile("myImg.png", "images/", 2000, ImageFile.ImageFormat.JPEG);
+        ImageFile imageFile = new ImageFile("myImg.jpg", "images/", 2000, ImageFile.ImageFormat.JPEG);
         ImageFile cloned = (ImageFile) imageFile.clone();
-        Assertions.assertEquals("myImg.png", cloned.getName());
+        Assertions.assertEquals("myImg.jpg", cloned.getName());
         Assertions.assertEquals("images/", cloned.getDirectory());
         Assertions.assertEquals(2000, cloned.getSize());
         Assertions.assertEquals(ImageFile.ImageFormat.JPEG, cloned.getFormat());
