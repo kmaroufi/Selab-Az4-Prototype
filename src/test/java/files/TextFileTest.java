@@ -33,4 +33,14 @@ public class TextFileTest {
         TextFile textFile = new TextFile("text1.txt", "/", 150, "Unicode");
         Assertions.assertEquals("Unicode", textFile.getEncoding());
     }
+
+    @Test
+    public void testClone() {
+        TextFile textFile = new TextFile("a.txt", "/src/", 1000, "Unicode");
+        TextFile cloned = (TextFile) textFile.clone();
+        Assertions.assertEquals("a.txt", cloned.getName());
+        Assertions.assertEquals("/src/", cloned.getDirectory());
+        Assertions.assertEquals(1000, cloned.getSize());
+        Assertions.assertEquals("Unicode", cloned.getEncoding());
+    }
 }
